@@ -1,12 +1,9 @@
 {
   "name": "normalize-repo",
   "version": "1.0.0",
-  "main": "./dist/index.js",
+  "main": "dist/index.js",
   "author": "krmax44 <hi@krmax44.de>",
   "license": "MIT",
-  "files": [
-    "./dist/index.js"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/krmax44/normalize-repo.git"
