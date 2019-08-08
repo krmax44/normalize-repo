@@ -43,7 +43,6 @@ module.exports = function(repo: RepositoryObject | string): NormalizedRepo {
 
 			if (hostname in Providers && (!type || type === 'git')) {
 				provider = (Providers as any)[hostname];
-				console.log(provider);
 
 				const results = /^\/([^/]*)\/?([^/]*)?$/.exec(parsedUrl.pathname);
 				if (results === null) {
