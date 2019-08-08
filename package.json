@@ -1,0 +1,57 @@
+{
+  "name": "normalize-repo",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "author": "krmax44 <hi@krmax44.de>",
+  "license": "MIT",
+  "files": [
+    "./dist/index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/krmax44/normalize-repo.git"
+  },
+  "scripts": {
+    "test": "jest && xo",
+    "lint": "xo",
+    "build": "tsc",
+    "dev": "tsc -w",
+    "prepublishOnly": "npm test"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.13.0",
+    "@typescript-eslint/parser": "^1.13.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-config-xo-typescript": "^0.15.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^3.0.3",
+    "jest": "^24.8.0",
+    "np": "^5.0.3",
+    "prettier": "^1.18.2",
+    "typescript": "^3.5.3",
+    "xo": "^0.24.0"
+  },
+  "xo": {
+    "extends": [
+      "xo-typescript",
+      "plugin:prettier/recommended"
+    ],
+    "extensions": [
+      "ts"
+    ],
+    "prettier": true,
+    "ignores": [
+      "./tests/**"
+    ]
+  },
+  "prettier": {
+    "bracketSpacing": true,
+    "singleQuote": true
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test",
+      "pre-push": "npm run test"
+    }
+  }
+}
