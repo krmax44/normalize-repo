@@ -9,6 +9,7 @@
     "url": "https://github.com/krmax44/normalize-repo.git"
   },
   "scripts": {
+    "pretest": "npm run build",
     "test": "jest && xo",
     "lint": "xo",
     "build": "tsc && uglifyjs dist/index.js -o dist/index.js",
