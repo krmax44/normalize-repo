@@ -11,7 +11,7 @@
   "scripts": {
     "test": "jest && xo",
     "lint": "xo",
-    "build": "tsc",
+    "build": "tsc && uglifyjs dist/index.js -o dist/index.js",
     "dev": "tsc -w",
     "prepublishOnly": "npm test"
   },
@@ -26,6 +26,7 @@
     "np": "^5.0.3",
     "prettier": "^1.18.2",
     "typescript": "^3.6.2",
+    "uglify-js": "^3.6.0",
     "xo": "^0.24.0"
   },
   "xo": {
@@ -43,7 +44,8 @@
   },
   "prettier": {
     "bracketSpacing": true,
-    "singleQuote": true
+    "singleQuote": true,
+    "useTabs": true
   },
   "husky": {
     "hooks": {
