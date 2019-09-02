@@ -11,7 +11,9 @@ test('github object', () => {
 });
 
 test('gist object', () => {
-	expect(normalizeRepo({ url: 'https://gist.github.com/abcdefghijklmnop.git' })).toEqual({
+	expect(
+		normalizeRepo({ url: 'https://gist.github.com/abcdefghijklmnop.git' })
+	).toEqual({
 		url: 'https://gist.github.com/abcdefghijklmnop.git',
 		shortcut: 'gist:abcdefghijklmnop',
 		provider: 'gist',

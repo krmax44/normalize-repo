@@ -21,5 +21,7 @@ test('gist shortcut', () => {
 });
 
 test('invalid shortcut', () => {
-	expect(() => normalizeRepo('github:foo')).toThrow('Malformatted repository shortkey.');
+	expect(() => normalizeRepo('github:foo')).toThrow(
+		'Malformatted repository shortkey.'
+	);
 });
