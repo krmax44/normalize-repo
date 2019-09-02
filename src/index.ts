@@ -79,8 +79,9 @@ module.exports = function(repo: RepositoryObject | string): NormalizedRepo {
 			name = undefined;
 		} else if (!name) throw new Error('Malformatted repository shortkey.');
 
-		const hostname = Object.keys(Providers).find(
-			key => Providers[key as any] === provider
+		const providers = Providers as { [key: string]: any };
+		const hostname = Object.keys(providers).find(
+			key => providers[key] === provider
 		);
 
 		const url = `https://${hostname}/${
