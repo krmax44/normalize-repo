@@ -1,6 +1,6 @@
 {
   "name": "normalize-repo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "author": "krmax44 <hi@krmax44.de>",
   "license": "MIT",
