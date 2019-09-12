@@ -24,7 +24,7 @@ const removeGit = (path: string): string =>
 
 // See https://docs.npmjs.com/files/package.json#repository for more info
 
-module.exports = function(repo: RepositoryObject | string): NormalizedRepo {
+function normalizeRepo(repo: RepositoryObject | string): NormalizedRepo {
 	if (typeof repo === 'object') {
 		const { url, type } = repo;
 		if (!url) {
@@ -90,4 +90,13 @@ module.exports = function(repo: RepositoryObject | string): NormalizedRepo {
 
 		return { url, shortcut: repo, provider, owner, name };
 	}
-};
+}
+
+export default normalizeRepo;
+export { normalizeRepo };
+
+if (typeof module !== 'undefined') {
+	module.exports = normalizeRepo;
+	module.exports.default = normalizeRepo;
+	module.exports.normalizeRepo = normalizeRepo;
+}
