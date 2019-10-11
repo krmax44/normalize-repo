@@ -1,7 +1,8 @@
-const normalizeRepo = require('../dist');
+import test from 'ava';
+import { normalizeRepo } from '..';
 
-test('github shortcut', () => {
-	expect(normalizeRepo('github:foo/bar')).toEqual({
+test('github shortcut', t => {
+	t.deepEqual(normalizeRepo('github:foo/bar'), {
 		url: 'https://github.com/foo/bar.git',
 		shortcut: 'github:foo/bar',
 		provider: 'github',
@@ -10,8 +11,8 @@ test('github shortcut', () => {
 	});
 });
 
-test('gist shortcut', () => {
-	expect(normalizeRepo('gist:abcdefghijklmnop')).toEqual({
+test('gist shortcut', t => {
+	t.deepEqual(normalizeRepo('gist:abcdefghijklmnop'), {
 		url: 'https://gist.github.com/abcdefghijklmnop.git',
 		shortcut: 'gist:abcdefghijklmnop',
 		provider: 'gist',
@@ -20,8 +21,9 @@ test('gist shortcut', () => {
 	});
 });
 
-test('invalid shortcut', () => {
-	expect(() => normalizeRepo('github:foo')).toThrow(
+test('invalid shortcut', t => {
+	t.throws(
+		() => normalizeRepo('github:foo'),
 		'Malformatted repository shortkey.'
 	);
 });
