@@ -30,7 +30,7 @@
     "np": "^5.2.1",
     "prettier": "^1.19.1",
     "ts-node": "^8.5.4",
-    "typescript": "^3.7.2",
+    "typescript": "^3.7.3",
     "uglify-js": "^3.7.1",
     "xo": "^0.24.0"
   },
