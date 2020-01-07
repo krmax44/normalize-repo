@@ -32,7 +32,7 @@
     "ts-node": "^8.5.4",
     "typescript": "^3.7.4",
     "uglify-js": "^3.7.4",
-    "xo": "^0.24.0"
+    "xo": "^0.25.3"
   },
   "ava": {
     "compileEnhancements": false,
